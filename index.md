@@ -4,7 +4,7 @@ Some text
 # Some text
 ## Some text
 [Link](https://okulkarni573.github.io/cse15l-lab-reports/notindex.html)
-# ![Image](https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) #
+<!-- ![Image](https://images.pexels.com/photos/733853/pexels-photo-733853.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) --> 
 > Some text 
 > 
 * Some text
