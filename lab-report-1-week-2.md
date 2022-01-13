@@ -1,1 +1,1 @@
-![Image](https://github.com/okulkarni573/cse15l-lab-reports/blob/main/lab2.png?raw=true)
+![Image](https://raw.githubusercontent.com/okulkarni573/cse15l-lab-reports/main/lab2.png)
