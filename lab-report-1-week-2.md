@@ -1,1 +1,2 @@
 ![Image](https://raw.githubusercontent.com/okulkarni573/cse15l-lab-reports/main/lab2.png)
+![Image](lab2.png)
