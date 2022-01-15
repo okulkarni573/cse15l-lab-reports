@@ -24,6 +24,7 @@
 1. The syntax for `scp` for copying a file is `scp [File Directory/File] [Destination Directory]`. If I am currently located in my (client) home directory, and I wanted to transfer a file (in that directory) "Hello.java" to the "cs15lwi22zz@ieng6[]().ucsd.edu:~/" directory, I would run `scp Hello.java cs15lwi22zz@ieng6.ucsd.edu:~/`.
 2. Running java files on the server is virtually the same (`javac` to complile, `java` to run).
 3. Here are 2 examples: (1) where I copy a file from the server to my computer, and (2) where I copy a file to the server from my computer and then execute it:
+
 > ![Image](Step_4_1.png)
 
 
