@@ -24,10 +24,11 @@
 2. Running java files on the server is virtually the same (`javac` to complile, `java` to run).
 3. Here are 2 examples: (1) where I copy a file from the server to my computer, and (2) where I copy a file to the server from my computer and then execute it:
 > ![Image](Step_4_1.png)
->
+
 
 >![Image](Step_4_2.png)
-> 
+
+
 ## Step 5: Setting an SSH Key
 1. The purpose of this is to essentially set up a password on your computer (the private key) that the SSH server will recognize via another file (the public key). This means we won't necessarily have to enter a password every time we log into the SSH server.
 2. On the client: run `ssh-keygen`. You will be asked to enter a file to save the key (but there is a default option which should hopefully work fine) and to enter a passphrase. If you don't enter a passphrase, you will no longer need a password to log into the SSH server. When completed, this process should tell you where the public and private keys have been stored, the key fingerprint, and the key randomart.
