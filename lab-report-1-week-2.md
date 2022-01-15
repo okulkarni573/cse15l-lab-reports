@@ -19,6 +19,7 @@
 2. Some specific examples include `cd ~` to go (back) to the default directory and `ls -la` to list all files in a directory with details. You can use `man [command]` to check the manpage for that command if you forget or want to use some feature of it. To leave the server, one can use the `exit` command.
 3. In the following example, I create a file in the home directory, show it in the directory, then enter text into it, which I also show:
 ![Image](Step_3.png)
+
 ## Step 4: Moving Files with `scp`
 1. The syntax for `scp` for copying a file is `scp [File Directory/File] [Destination Directory]`. If I am currently located in my (client) home directory, and I wanted to transfer a file (in that directory) "Hello.java" to the "cs15lwi22zz@ieng6[]().ucsd.edu:~/" directory, I would run `scp Hello.java cs15lwi22zz@ieng6.ucsd.edu:~/`.
 2. Running java files on the server is virtually the same (`javac` to complile, `java` to run).
