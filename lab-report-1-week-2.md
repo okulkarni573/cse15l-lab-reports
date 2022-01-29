@@ -8,9 +8,9 @@
 ## Step 2: Remotely Connecting
 
 1. Install [OpenSSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse) if needed.
-2. Look up your [account](https://sdacs.ucsd.edu/~icc/index.php) for 15L. Specifically, the account should be in the format "cs15lwi22[abdsdfasda]". The last couple (not sure how many you will have) letters are specific to you, but I will use "cs15lwi22zz" as an example. You may have to configure your account for the course by setting a password for it. This seems to take most people a long time, but I have heard that turning off adblock while configuring may help.
+2. Look up your [account](https://sdacs.ucsd.edu/~icc/index.php) for 15L. Specifically, the account should be in the format `cs15lwi22[abdsdfasda]`. The last couple (not sure how many you will have) letters are specific to you, but I will use `cs15lwi22zz` as an example. You may have to configure your account for the course by setting a password for it. This seems to take most people a long time, but I have heard that turning off adblock while configuring may help.
 3. Remotely connect by opening a terminal in VSCode, then running the command 
-`ssh cs15lwi22zz@ieng6.ucsd.edu`. If it is your first time connecting to the server, it is normal to be given a warning and a prompt to continue, which you can do by entering "yes". This [link](https://superuser.com/questions/421074/ssh-the-authenticity-of-host-host-cant-be-established/421084#421084) to understand that was provided in the original post.
+`ssh cs15lwi22zz@ieng6.ucsd.edu`. If it is your first time connecting to the server, it is normal to be given a warning and a prompt to continue, which you can do by entering `yes`. This [link](https://superuser.com/questions/421074/ssh-the-authenticity-of-host-host-cant-be-established/421084#421084) to understand that was provided in the original post.
 4. You should be directed to enter your password, and then you will be in. It should look like this:
 ![Image](Step_2.png)
 
@@ -21,7 +21,7 @@
 ![Image](Step_3.png)
 
 ## Step 4: Moving Files with `scp`
-1. The syntax for `scp` for copying a file is `scp [File Directory/File] [Destination Directory]`. If I am currently located in my (client) home directory, and I wanted to transfer a file (in that directory) "Hello.java" to the "cs15lwi22zz@ieng6[]().ucsd.edu:~/" directory, I would run `scp Hello.java cs15lwi22zz@ieng6.ucsd.edu:~/`.
+1. The syntax for `scp` for copying a file is `scp [File Directory/File] [Destination Directory]`. If I am currently located in my (client) home directory, and I wanted to transfer a file (in that directory) `Hello.java` to the `cs15lwi22zz@ieng6[]().ucsd.edu:~/` directory, I would run `scp Hello.java cs15lwi22zz@ieng6.ucsd.edu:~/`.
 2. Running java files on the server is virtually the same (`javac` to complile, `java` to run).
 3. Here are 2 examples: (1) where I copy a file from the server to my computer, and (2) where I copy a file to the server from my computer and then execute it:
 
@@ -36,9 +36,10 @@
 2. On the client: run `ssh-keygen`. You will be asked to enter a file to save the key (but there is a default option which should hopefully work fine) and to enter a passphrase. If you don't enter a passphrase, you will no longer need a password to log into the SSH server. When completed, this process should tell you where the public and private keys have been stored, the key fingerprint, and the key randomart.
 3. If you are on windows, follow the extra steps [here](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation) that have to do with `ssh-add`. These steps will help you securely store the private key.
 ![Image](Step_5.png)
-4. Copy the public key (id_rsa.pub file) to the ssh directory of your account on the server. Example: `scp ~/.ssh/id_rsa.pub cs15lwi22zz@ieng6.ucsd.edu:~/.ssh/authorized_keys`. I had to make the ".ssh" directory first. Personally, I also set the ownership and permissions on those directories and the key to try and make them a little more secure (`chmod 700 ~/.ssh`, `chmod 600 ~/.ssh/authorized_keys` for perms). If you selected for an empty passphrase in part 2, you should be able to login without a password now!
+4. Copy the public key (id_rsa.pub file) to the ssh directory of your account on the server. Example: `scp ~/.ssh/id_rsa.pub cs15lwi22zz@ieng6.ucsd.edu:~/.ssh/authorized_keys`. I had to make the `.ssh` directory first. Personally, I also set the ownership and permissions on those directories and the key to try and make them a little more secure (`chmod 700 ~/.ssh`, `chmod 600 ~/.ssh/authorized_keys` for perms). If you selected for an empty passphrase in part 2, you should be able to login without a password now!
 
 ## Step 6: Optimizing Remote Running
 1. You can run commands over ssh while logging in by putting the commands in quotes. Multiple commands can be separated by semicolons. It should look like this: `ssh username@server "[command]; [command]; [command]"`.
 2. The following can be done to run a file remotely, then:
 ![Image](Step_6.png)
+3. I was able to bring the keystrokes down to around . The way I did this is to use a template for both scp and ssh. First, use this template for scp, then replace the file with your file by entering the first 3 or so digits and pressing tab (+4): `scp Hello.java cs15lwi22zz@ieng6.ucsd.edu:~/`. Copying adds (+6) more keystrokes [2 mouse clicks and ctrl + c and ctrl+v]. Then, use `ssh cs15lwi22zz@ieng6.ucsd.edu "javac hello.java; java hello"`. For copying, (+6), and for replacements of files, (+4), (+4). This brings the total to 24 keystrokes.
