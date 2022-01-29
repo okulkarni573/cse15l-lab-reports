@@ -2,7 +2,7 @@
 
 ![Image](diff_1.png)
 
-https://github.com/okulkarni573/markdown-parse/blob/main/Image.md
+[Image.md](https://github.com/okulkarni573/markdown-parse/blob/main/Image.md)
 
 The failure inducing input is Image.md.
 
@@ -15,7 +15,7 @@ The bug is that the code recognizes an image as a link- we fixed this by only ad
 
 ![Image](diff_2.png)
 
-https://github.com/okulkarni573/markdown-parse/blob/main/InfiniteLoop.md
+[InfiniteLoop.md](https://github.com/okulkarni573/markdown-parse/blob/main/InfiniteLoop.md)
 
 Failure-inducing input: InfiniteLoop.md
 
@@ -26,7 +26,7 @@ Bug: When there was no next instance of a parenthesis or bracket, the next index
 
 ![Image](diff_3.png)
 
-https://github.com/okulkarni573/markdown-parse/blob/main/CharAfter.md
+[CharAfter.md](https://github.com/okulkarni573/markdown-parse/blob/main/CharAfter.md)
 
 Failure-inducing input: CharAfter.md
 
