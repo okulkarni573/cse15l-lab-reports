@@ -11,6 +11,10 @@ The symptom is that running the code on Image.md includes the image in output:
 
 The bug is that the code recognizes an image as a link- we fixed this by only adding the "link" (according to the previous version of the code) if it is not actually an image.
 
+Screenshot of command and bug output:
+
+![Image](Fix1.png)
+
 ## Fix 2: Fixed issue with InfiniteLoop.md
 
 ![Image](diff_2.png)
@@ -19,9 +23,14 @@ The bug is that the code recognizes an image as a link- we fixed this by only ad
 
 Failure-inducing input: InfiniteLoop.md
 
-Symptom: The code wouldn't produce any output, but rather would endlessly run.
+Symptom: The code wouldn't produce any output, but rather would run for a long time. Then it would throw an error indicating it ran out of memory (because it would theoretically loop infinitely).
 
 Bug: When there was no next instance of a parenthesis or bracket, the next index became -1, and the code kept looping through the file continuously. To prevent this, we break out of the loop if the index of a parenthesis of bracket falls under 0.
+
+Screenshot of command and bug output:
+
+![Image](Fix2.png)
+
 ## Fix 2: Fixed issue with CharAfter.md
 
 ![Image](diff_3.png)
@@ -34,3 +43,7 @@ Symptom: Not printing out a link as it should, but instead printing an empty arr
 `[]`
 
 Bug: The fix made to Image.md was too restrictive and did not consider the case where the first open bracket was at index 0.
+
+Screenshot of command and bug output:
+
+![Image](Fix3.png)
