@@ -14,3 +14,4 @@ This screenshot shows the private and public keys on my user account. These are 
 
 ![Image](snip_3.png)
 
+This screenshot shows the edit I made to the lab report remotely. It also shows me commiting and pushing this change from my ieng6 account.
