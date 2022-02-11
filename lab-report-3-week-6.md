@@ -18,7 +18,7 @@ This screenshot shows the private and public keys on my user account. These are 
 
 This screenshot shows the edit I made to the lab report remotely. It also shows me commiting and pushing this change from my ieng6 account.
 
-## Screenshot 4
+## Link 4
 
 [Link](https://github.com/okulkarni573/cse15l-lab-reports/commit/3870eb486472729fe116f963c21d270481bffa12)
 
