@@ -2,9 +2,13 @@
 I decided on the tests by running the examples through the CommonMark site. I looked at the links that showed up and the websites they linked to (I didn't discriminate on the basis of the existance of validity of the site though). Here are the tests for the 3 cases, in order. The valid links are the red strings (excluding the .md files):
 ![Image](Tests.png)
 ## Reviewed implementation
+[Repo](https://github.com/austin-li/CSE15L-TheLunaMoths)
+
 All tests failed:
 ![Image](TheirTests.png)
 ## My implementation
+[Repo](https://github.com/okulkarni573/markdown-parse-main)
+
 All tests failed:
 ![Image](MyTests.png)
 Answers for each of the snippets:
